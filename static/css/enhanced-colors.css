@@ -1,0 +1,100 @@
+/* Enhanced Color Palette for Personal Homepage */
+
+:root {
+    /* 主色调 - 现代蓝色系 */
+    --primary-blue: #2937f0;
+    --primary-blue-light: #4a5bff;
+    --primary-blue-dark: #1e2bd4;
+    
+    /* 辅助色调 - 渐变紫色 */
+    --secondary-purple: #9f1ae2;
+    --secondary-purple-light: #b347e8;
+    --secondary-purple-dark: #8615c4;
+    
+    /* 现代渐变背景 */
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-tech: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --gradient-warm: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    
+    /* 中性色彩 */
+    --text-primary: #2c3e50;
+    --text-secondary: #7f8c8d;
+    --background-light: #f8fafc;
+    --background-white: #ffffff;
+    --border-light: #e2e8f0;
+    
+    /* 强调色 */
+    --accent-orange: #ff6b35;
+    --accent-green: #00d4aa;
+    --accent-yellow: #ffd700;
+    
+    /* 阴影效果 */
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    
+    /* 动画时长 */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-primary: #e2e8f0;
+        --text-secondary: #a0aec0;
+        --background-light: #1a202c;
+        --background-white: #2d3748;
+        --border-light: #4a5568;
+    }
+}
+
+/* 渐变背景类 */
+.bg-gradient-tech {
+    background: var(--gradient-tech) !important;
+}
+
+.bg-gradient-warm {
+    background: var(--gradient-warm) !important;
+}
+
+.bg-gradient-modern {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.bg-gradient-sunset {
+    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%) !important;
+}
+
+/* 文字渐变效果 */
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* 现代化卡片样式 */
+.modern-card {
+    background: var(--background-white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+    padding: 2rem;
+    transition: all var(--transition-normal);
+    border: 1px solid var(--border-light);
+}
+
+.modern-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-large);
+}
+
+/* 彩色边框 */
+.border-gradient {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                var(--gradient-primary) border-box;
+    border-radius: 12px;
+}
