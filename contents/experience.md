@@ -1,15 +1,15 @@
 ### **Range-SLAM: Ultra-Wideband-Based Smoke-Resistant Real-Time Localization and Mapping**  
 > *Yi Liu, Zhuozhu Jian, **Shengtao Zheng**, Houde Liu, Xueqian Wang, Xinlei Chen, Bin Liang*    
 
-- Pioneered a UWB-based real-time localization and mapping system capable of constructing and updating maps without expensive LiDAR or other specialized hardware.
+- First proposed a real-time localization and mapping based on Ultra-Wideband (UWB), combined with UWB tag motion and ray casting algorithms for map construction and updates, achieving precise map building and positioning without expensive LiDAR or other dedicated hardware.
 
-- **Technical Details**: Developed an SLAM system relying solely on UWB devices; Designed an SVM-based low-complexity NLOS recognition module; Implemented a weighted least squares method to improve positioning accuracy in NLOS areas.  
+- **Technical Details**: Proposed an SLAM system that relies entirely on UWB devices for real-time localization and mapping; designed a low-complexity real-time NLOS recognition module based on Support Vector Machine (SVM) to quickly detect obstacles between anchors and tags; integrated robot motion data with ray casting algorithms to construct a 2D occupancy grid map in real-time environments solely using UWB ranging information and RSSI; improved positioning accuracy in NLOS areas by adopting Weighted Least Squares (WLS) based on the constructed grid map.  
 
 ---
 
 ### **LVCP: LiDAR-Vision Tightly Coupled Collaborative Real-time Relative Positioning**  
 > *Zhuozhu Jian, Qixuan Li, **Shengtao Zheng**, Xueqian Wang, Xinlei Chen*  
 
-- Proposed a robust real-time relative pose estimation method tightly coupling monocular vision cameras and LiDAR point clouds.
+- Proposed a robust real-time relative pose estimation method tightly coupled with monocular vision cameras and LiDAR point clouds (LVCP), enabling drones to achieve accurate relative positioning without prior maps and initial pose disturbances.
 
-- **Technical Details**: Introduced a coarse-to-fine framework for collaborative localization; Utilized VIO for initial camera pose propagation; Implemented adaptive event-triggered PSO sampling for precise point cloud matching.
+- **Technical Details**: Introduced a novel coarse-to-fine framework for real-time collaborative localization using LiDAR and vision; utilized Visual-Inertial Odometry (VIO) to propagate initial camera poses and build feature point clouds, followed by backend optimization based on pose sampling and spatial association of feature point clouds for precise localization; proposed an adaptive event-triggered PSO sampling algorithm to achieve relatively accurate point cloud matching within limited time intervals; associated feature point clouds with LiDAR point clouds based on three-dimensional geometric space information and built point-auxiliary Bundle Adjustment (BA) problems based on point-plane residuals.
