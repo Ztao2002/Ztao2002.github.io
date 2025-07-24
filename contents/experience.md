@@ -1,6 +1,6 @@
 ### **Range-SLAM: Ultra-Wideband-Based Smoke-Resistant Real-Time Localization and Mapping**  
 > *Yi Liu, Zhuozhu Jian, **Shengtao Zheng**, Houde Liu, Xueqian Wang, Xinlei Chen, Bin Liang*    
-[![arXiv](https://img.shields.io/badge/arXiv-2406.09246-df2a2a.svg?style=for-the-badge)](https://arxiv.org/abs/2409.09763)
+[![arXiv](https://img.shields.io/badge/arXiv-2409.09763-df2a2a.svg?style=for-the-badge)](https://arxiv.org/abs/2409.09763)
 
 
 - First proposed a real-time localization and mapping based on Ultra-Wideband (UWB), combined with UWB tag motion and ray casting algorithms for map construction and updates, achieving precise map building and positioning without expensive LiDAR or other dedicated hardware.
@@ -11,7 +11,7 @@
 
 ### **LVCP: LiDAR-Vision Tightly Coupled Collaborative Real-time Relative Positioning**  
 > *Zhuozhu Jian, Qixuan Li, **Shengtao Zheng**, Xueqian Wang, Xinlei Chen*  
-[![arXiv](https://img.shields.io/badge/arXiv-2406.09246-df2a2a.svg?style=for-the-badge)](https://arxiv.org/abs/2407.10782)
+[![arXiv](https://img.shields.io/badge/arXiv-2407.10782-df2a2a.svg?style=for-the-badge)](https://arxiv.org/abs/2407.10782)
 
 - Proposed a robust real-time relative pose estimation method tightly coupled with monocular vision cameras and LiDAR point clouds (LVCP), enabling drones to achieve accurate relative positioning without prior maps and initial pose disturbances.
 
