@@ -1,0 +1,2 @@
+### Self-Assessment  
+Possess strong teamwork skills, independent thinking capability, and high responsibility towards work. Experienced in leading and participating in multiple research projects, with expertise in multimodal large models, including training and deployment. Currently focused on enhancing VLA large model reasoning and lightweighting of multimodal models, passionate about contributing to the field of multimodal large models.
