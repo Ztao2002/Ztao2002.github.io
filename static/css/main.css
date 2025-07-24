@@ -3,11 +3,124 @@
 
 :root{
     --h-title-color:#3948d2;
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --nav-bg: #ffffff;
+    --section-bg-light: linear-gradient(45deg, #fcfcfc, #ffffff);
+    --section-bg-gray: linear-gradient(45deg, #f0f0f0, #f1f1f1);
+    --section-bg-dark: #1a1a1a;
+}
+
+[data-theme="dark"] {
+    --h-title-color: #6c7ce8;
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --nav-bg: #2a2a2a;
+    --section-bg-light: linear-gradient(45deg, #2a2a2a, #3a3a3a);
+    --section-bg-gray: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+    --section-bg-dark: #0a0a0a;
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 9999;
+    background: var(--h-title-color);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Responsive design for theme toggle */
+@media screen and (max-width: 768px) {
+    .theme-toggle {
+        top: 80px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .theme-toggle {
+        top: 70px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* Click effect styles */
+.click-effect {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, var(--h-title-color) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: clickRipple 0.6s ease-out;
+    z-index: 9998;
+}
+
+@keyframes clickRipple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+/* Enhanced click effects for different elements */
+.click-effect.button-click {
+    background: radial-gradient(circle, #ffd700 0%, transparent 70%);
+}
+
+.click-effect.link-click {
+    background: radial-gradient(circle, var(--h-title-color) 0%, transparent 70%);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .header {
     border-bottom: solid 2px var(--bs-blue);
     z-index: 10000;
+    background-color: var(--nav-bg) !important;
+    transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .header {
+    border-bottom-color: var(--h-title-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .bg-bottom {
@@ -46,21 +159,81 @@ section header h2{
     color: var(--h-title-color);
     font-size: 2.3rem;
     line-height: 4rem;
+    transition: color 0.3s ease;
 }
 
 section .main-body{
     font-size: 1.3rem;
     font-weight: 200;
     line-height: 2.4rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+/* Dark mode navbar styles */
+[data-theme="dark"] .navbar-light .navbar-nav .nav-link {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .navbar-light .navbar-nav .nav-link:hover {
+    color: var(--h-title-color) !important;
+}
+
+[data-theme="dark"] .navbar-light .navbar-brand {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .navbar-light .navbar-toggler {
+    color: var(--text-color) !important;
+    border-color: var(--text-color) !important;
+}
+
+/* Footer dark mode */
+[data-theme="dark"] .bg-bottom {
+    background-color: #0a0a0a !important;
+}
+
+[data-theme="dark"] .text-white-50 {
+    color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .text-white-50 a {
+    color: var(--h-title-color) !important;
+}
+
+/* Dark mode for top section */
+[data-theme="dark"] .top-section:before {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Dark mode for avatar shadow */
+[data-theme="dark"] #avatar img {
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Dark mode for links */
+[data-theme="dark"] a {
+    color: var(--h-title-color);
+}
+
+[data-theme="dark"] a:hover {
+    color: #8a9aff;
 }
 
 
 .bg-gradient-primary-to-secondary-light {
-    background: linear-gradient(45deg, #fcfcfc, #ffffff) !important;
+    background: var(--section-bg-light) !important;
+    transition: background 0.3s ease;
 }
 
 .bg-gradient-primary-to-secondary-gray {
-    background: linear-gradient(45deg, #f0f0f0, #f1f1f1) !important;
+    background: var(--section-bg-gray) !important;
+    transition: background 0.3s ease;
+}
+
+.bg-gradient-primary-to-secondary-dark {
+    background: var(--section-bg-dark) !important;
+    transition: background 0.3s ease;
 }
 
 
