@@ -8,7 +8,7 @@
     --nav-bg: #ffffff;
     --section-bg-light: linear-gradient(45deg, #fcfcfc, #ffffff);
     --section-bg-gray: linear-gradient(45deg, #f0f0f0, #f1f1f1);
-    --section-bg-dark: #1a1a1a;
+    --section-bg-dark: linear-gradient(45deg, #e8e8e8, #f5f5f5);
 }
 
 [data-theme="dark"] {
@@ -18,7 +18,7 @@
     --nav-bg: #2a2a2a;
     --section-bg-light: linear-gradient(45deg, #2a2a2a, #3a3a3a);
     --section-bg-gray: linear-gradient(45deg, #1a1a1a, #2a2a2a);
-    --section-bg-dark: #0a0a0a;
+    --section-bg-dark: linear-gradient(45deg, #0a0a0a, #1a1a1a);
 }
 
 /* Theme toggle button styles */
