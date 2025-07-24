@@ -316,6 +316,23 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(counter);
     });
     
+    // 初始化技能进度条动画
+    document.querySelectorAll('.indicator-fill').forEach(fill => {
+        const width = fill.getAttribute('data-width');
+        if (width) {
+            fill.style.setProperty('--progress-width', width);
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        fill.classList.add('animate');
+                        observer.unobserve(fill);
+                    }
+                });
+            });
+            observer.observe(fill);
+        }
+    });
+    
     // 添加粒子背景
     const particleContainers = document.querySelectorAll('.particles-container');
     particleContainers.forEach(container => {
@@ -326,6 +343,16 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.body.classList.add('loaded');
     }, 100);
+    
+    // 初始化工具提示
+    document.querySelectorAll('.tooltip-custom').forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            const tooltip = element.getAttribute('data-tooltip');
+            if (tooltip) {
+                element.setAttribute('title', tooltip);
+            }
+        });
+    });
 });
 
 // 性能优化：防抖函数
