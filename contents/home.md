@@ -1,4 +1,4 @@
-[![PDXzst](https://img.shields.io/badge/XX-github-blue?logo=github)](https://github.com/PDXzst)
+[![PDXzst](https://img.shields.io/badge/PDXzst-github-blue?logo=github)](https://github.com/PDXzst)
 
 I'm currently pursuing a Master's degree in Electronic Information (Artificial Intelligence) at the Institute of Data and Information, Tsinghua University Shenzhen International Graduate School.
 
