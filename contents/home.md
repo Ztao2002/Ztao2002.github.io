@@ -1,5 +1,5 @@
 [![PDXzst](https://img.shields.io/badge/PDXzst-github-blue?logo=github)](https://github.com/PDXzst)
-[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Shengtao%20Zheng-blue?logo=google-scholar&style=flat-square)]([https://scholar.google.com](https://scholar.google.com.hk/citations?user=YHhix9IAAAAJ))
+[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Shengtao%20Zheng-blue?logo=google-scholar&style=flat-square)](https://scholar.google.com.hk/citations?user=YHhix9IAAAAJ)
 
 
 
